@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
+import React from "react";
 import './Card.css';
 
-class Card extends Component {
-    render() {
-      return (
-<div className="card" style="width: 18rem;">
-  <img className="card-img-top" src=".../100px180/" alt="Card image cap"></img>
-</div>
-    );
-}
-}
+const Card = props => {
+  console.log(props);
+
+  return (
+    <div className="card">
+      <div className="img-container">
+        <img className="card-img-top" alt={props.name} src={props.image} />
+      </div>
+    </div>
+  );
+};
+
+
 
 export default Card;
