@@ -1,24 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Navbar.css';
 
-class Navbar extends Component {
-  render(props) {
-    return (
-      <div>
-        <ul className="nav justify-content-center">
-          <li className="nav-item">
-            Clicky Game
-          </li>
-          <li className="nav-item">
-            Click image to begin
-          </li>
-          <li>Score: {props.score}</li>
-          <li>||</li>
-          <li>Top Score: {props.topScore}</li>
-        </ul>
-      </div>
-    );
-  }
+function Navbar(props) {
+	return(
+	<div className="navbar-fixed">
+		<nav>
+			<div className="nav-wrapper container">
+				<a href="/" className='brand-logo left'>Clicky Game</a>
+				<ul className='right'>
+					<li style={{paddingRight: "15px"}}>Score: {props.score}</li>
+					<li>||</li>
+					<li style={{paddingLeft: "15px"}}>Top Score: {props.topScore}</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	)
 }
 
 export default Navbar;

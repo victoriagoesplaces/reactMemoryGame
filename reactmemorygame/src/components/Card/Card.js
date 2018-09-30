@@ -1,18 +1,21 @@
 import React from "react";
 import './Card.css';
 
-const Card = props => {
-  console.log(props);
+function handleClick(props) {
+	props.reArrangeCards();
+	props.clickedCharacter(props.id);
+}
 
-  return (
-    <div className="card">
-      <div className="img-container">
-        <img className="card-img-top" alt={props.name} src={props.image} />
-      </div>
-    </div>
-  );
-};
 
+function Card(props) {
+	return (
+		<div className="img-container">
+			<img onClick={() => handleClick(props)} alt={props.name} src={props.image} />
+		</div>
+	)
+}
 
 
 export default Card;
+
+
