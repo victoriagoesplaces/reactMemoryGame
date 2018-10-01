@@ -8,9 +8,8 @@ function Navbar(props) {
 			<div className="nav-wrapper container">
 				<a href="/" className='brand-logo left'>Clicky Game</a>
 				<ul className='right'>
-					<li style={{paddingRight: "15px"}}>Score: {props.score}</li>
-					<li>||</li>
-					<li style={{paddingLeft: "15px"}}>Top Score: {props.topScore}</li>
+					<li>Score: {props.score}</li>
+					<li >Top Score: {props.topScore}</li>
 				</ul>
 			</div>
 		</nav>

@@ -1,7 +1,12 @@
-.navbar  {
-    background: rgba(71, 201, 168, 0.459);
+.navbar-fixed nav {
+    background: rgba(71, 201, 168, 0.685);
 }
 
-a.navbar-brand {
+a.nav {
     color:  rgb(6, 77, 59);
+}
+
+li {
+   padding-left: 15px;
+
 }
