@@ -6,6 +6,7 @@ import cards from './cards.json'
 import './App.css';
 
 class App extends Component {
+
   state = {
     cards: cards,
     score: 0,
@@ -65,7 +66,7 @@ class App extends Component {
   
   renderCards = (array) => {
   return this.state.cards.map(card => (
-    <section className='col s4 m3 l3' key={card.id} id={card.id}>
+    <section className='col s4' key={card.id} id={card.id}>
       <Card
         name={card.name} 
         image={card.image} 
@@ -75,25 +76,31 @@ class App extends Component {
     )
   )
   }
-  
+ 
   
   render() {
   return (
-    <div className="container-fluid">
-      <Navbar score={this.state.score} topScore={this.state.topScore}/>
-      <div className="container instructions">
-        <h5>Click on an image to earn points making sure none of them get clicked twice</h5>
+    <div>
+      <div className="container-fluid">
+        <Navbar score={this.state.score} topScore={this.state.topScore}/>
+        <div className="container instructions">
+          <h5>Click on each of the images, making sure not to select the same one twice. <br></br>
+          <br></br>If you are able to get your score to hit 9, then you win the game. Give it your best shot and see if you can remember what you clicked.</h5>
+        </div>
+        <div className="container instructions">{this.state.message}</div>
+        <br />
+        <div className="container row cardWrapper">
+          {this.renderCards(this.state.cards)}
+        </div>
       </div>
-      <div className="container instructions">{this.state.message}</div>
-      <br />
-      <div className="container row cardWrapper">
-        {this.renderCards(this.state.cards)}
-      </div>
+      <Footer/>
     </div>
-  );
+ );
+   
   }
+ 
   }
 
-  <Footer/>
+
 export default App;
 

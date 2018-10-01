@@ -1,8 +1,10 @@
-.navbar  {
-    background: rgba(71, 201, 168, 0.459);
+
+.page-footer {
     align-content: center;
+    background: rgba(71, 201, 168, 0.459);
+    padding-bottom: 1%;
 }
 
-a.navbar-brand {
+a.page-footer {
     color:  rgb(6, 77, 59);
 }
